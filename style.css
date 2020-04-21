@@ -1,0 +1,141 @@
+.cdn{
+  color:#581845;
+}
+.paddingfr{
+  padding-left: 15px;
+}
+.mrn{
+margin-right: -10px;
+
+}
+.bkb{
+  padding-left: 18px;
+}
+.icon{
+        color: blue;
+        margin-left: 70px;
+      }
+.navbar{
+	background-color: #4E73DB;
+}
+nav a{
+	color:#ffffff;
+}
+.nav-link{
+  color:#ffffff;
+}
+.material-icons{
+	vertical-align: middle;
+  color:color:#ffffff;
+  size: 40px;
+}
+.access-time{
+	font-size: 12px;
+}
+.jumbotron{    
+  	background: url('https://images.unsplash.com/photo-1467453678174-768ec283a940?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	text-shadow: 2px 0px #000000;
+  	padding-top: 10vh!important;
+  	padding-bottom: 15vh!important;
+  	padding-left: 10vw;
+}
+.blinking{
+  animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
+.container-fluid search-container{
+  float:left;
+}
+.container-fluid navbar-collapse {
+  float:right;
+}
+.container-fluid .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.container-fluid .search-container button:hover {
+  background: #ccc;
+}
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.container-fluid input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+
+}
+
+.first
+{
+  background-image: url("fam.jpg");
+}
+body {
+    font-family: 'Open Sans';
+}
+.hd{
+  text-align: center;
+  background-color: #0D1018;
+  color:white;
+}
+.bg{
+  background-color:#0D1018 ;
+  opacity: 1;
+}
+.bco{
+  background-color: #555658 ;
+}
+.fco{
+  color:#ffffff;
+}
+.fomar{
+  margin-bottom:-1%;
+}
+.icon-blue{
+  color:blue;
+}
+.icon-red{
+  color:red;
+  fill: none;
+}
+.rf{
+  float:right;
+}
+.coral{
+  color:#ff6347;
+}
+.item1-font-size{
+  font-size: 14px;
+}
+.item2-font-size{
+  font-size: 12px;
+}
+a:hover{
+  color:white;
+}

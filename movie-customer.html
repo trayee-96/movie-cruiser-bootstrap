@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>Movie</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" type="text/css" rel="stylesheet"/>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous">
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="../../style/style.css">
+  </head>
+  <body>
+<header>
+      <nav class="navbar navbar-expand-sm bco">
+        <div class="container-fluid">
+          
+          <a href="#" class="navbar-brand pl-3 fco"><h3><span class="material-icons alCenter" >theaters</span><b>Movie Cruiser</b></h3></a>
+
+          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="material-icons fco">reorder</span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="search-container">
+              <form action="">
+                <input type="text" placeholder="search movies,shows here" name="search">
+                <button type="submit"><span class="material-icons">search</span></button>
+             </form>
+            </div>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item px-2">
+                
+                <a href="menu-item-list" class="nav-link fco">Home</a>
+              
+              </li>
+              
+              <li class="nav-item px-2">
+                
+                <a href="fav.html" class="nav-link fco">Favourites<span class="material-icons">add</span>2</a>
+              
+              </li>
+              </li>
+              <li class="nav-item px-2">
+                
+                <a href="menu-item-list" class="nav-link fco">Sign Up</a>
+              
+              </li>
+              <li class="nav-item px-2">
+                
+                <a href="menu-item-list" class="nav-link fco">Login</a>
+              
+              </li>
+  
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+<div class="container-fluid">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 h-30" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2019/09/Joker.jpg?fit=1392%2C696&ssl=1" height="10%" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 h-30" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTU1EUrfTR3CsCxj-wH9v06q7kA5vufh8T_mPqYh8PeXlRRVJNF&usqp=CAU" height="30%" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="data:image/jpeg;base64,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" height="500" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-money-heist-party-feat-star-strum-2020-1-7-t-15-57-59.jpg" height="60%" alt="fourth slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<div class="container heading pt-3">
+  <h1 class="hd">Watch movies and teaser</h1>
+</div>
+
+<div class="container-fluid bg">
+      <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 pt-3">
+      <div class="card">
+      <img class="card-img-top" src="https://i.ytimg.com/vi/80vBu4lEsgM/maxresdefault.jpg" height="350" alt="Card image cap">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="card-title">Hera pheri</h4>
+                </div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><h4 class="card-title text-right cdn">&#8377;Free</h4></div></div>
+
+
+     <div class="row">
+      <div class="col-6">
+        <a><span class="badge badge-success">Active</span><p class="card-title mb-2">Comedy</p></a></div>
+      
+      
+      <div class="col-1">
+      <h6 class="card-title text-right icon-red"> <span class="material-icons alCenter">play_arrow</span></h6></div>
+      <div class="col-5 mrn"><a href="https://www.youtube.com/watch?v=TIQ5hrfermg"><span class="badge badge-danger blinking">Watch Now</span></a></div></div>
+
+    <div class="row">
+      <div class="col-7">
+        <span class="material-icons">query_builder</span>27th jan 2000 | Hindi</div>
+    <div class="col-5 text-right"><p class="h4 ">
+            <a href="#" class="card-link">
+              <span class="material-icons icon-red" >favorite_border</span>
+            </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 pt-3">
+      <div class="card">
+      <img class="card-img-top" src="https://www.jakpost.travel/wimages/large/32-327526_wallpaper-seram-hd-annabelle-3-2019-poster.jpg" height="350" alt="Card image cap">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="card-title">Annable</h4>
+                </div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><h4 class="card-title text-right cdn">&#8377;199</h4></div></div>
+
+
+     <div class="row">
+      <div class="col-6">
+        <a><span class="badge badge-success">Active</span><p class="card-title mb-2">Horror</p></a></div>
+      
+      
+      <div class="col-1">
+      <h6 class="card-title text-right icon-red"> <span class="material-icons alCenter">double_arrow</span></h6></div>
+      <div class="col-5 mrn"><a href="https://www.youtube.com/watch?v=TIQ5hrfermg"><span class="badge badge-info">Teaser</span></a></div></div>
+
+    <div class="row">
+      <div class="col-7">
+        <span class="material-icons">query_builder</span>27th jan 2018 | English</div>
+    <div class="col-5 text-right"><p class="h4 ">
+            <a href="#" class="card-link">
+              <span class="material-icons icon-red" >favorite_border</span>
+            </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 pt-3">
+      <div class="card">
+      <img class="card-img-top" src="https://timesofindia.indiatimes.com/photo/65811245.cms" height="350" alt="Card image cap">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="card-title">Kontho</h4>
+                </div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><h4 class="card-title text-right cdn">&#8377;209</h4></div></div>
+
+
+     <div class="row">
+      <div class="col-6">
+        <a><span class="badge badge-success">Active</span><p class="card-title mb-2">Comedy</p></a></div>
+      
+      
+      <div class="col-1">
+      <h6 class="card-title text-right icon-red"> <span class="material-icons alCenter">double_arrow</span></h6></div>
+      <div class="col-5 mrn"><a href="https://www.youtube.com/watch?v=TIQ5hrfermg"><span class="badge badge-info">Teaser</span></a></div></div>
+
+    <div class="row">
+      <div class="col-7">
+        <span class="material-icons">query_builder</span>27th dec 2019 | Bengali</div>
+    <div class="col-5 text-right"><p class="h4 ">
+            <a href="#" class="card-link">
+              <span class="material-icons icon-red" >favorite_border</span>
+            </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 pt-3">
+      <div class="card">
+      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS5Oxa_oaUUI6dPe05hgnfazA-AJ9AUnPIeKWS3K-gfiHsE0pf4&usqp=CAU" height="350" alt="Card image cap">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="card-title">Civil War</h4>
+                </div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><h4 class="card-title text-right cdn">&#8377;Free</h4></div></div>
+
+
+     <div class="row">
+      <div class="col-6">
+        <a><span class="badge badge-success">Active</span><p class="card-title mb-2">Thriller</p></a></div>
+      
+      
+      <div class="col-1">
+      <h6 class="card-title text-right icon-red"> <span class="material-icons alCenter">double_arrow</span></h6></div>
+      <div class="col-5 mrn"><a href="https://www.youtube.com/watch?v=TIQ5hrfermg"><span class="badge badge-info">Teaser</span></a></div></div>
+
+    <div class="row">
+      <div class="col-7">
+        <span class="material-icons">query_builder</span>27th jan 2018 | English</div>
+    <div class="col-5 text-right"><p class="h4 ">
+            <a href="#" class="card-link">
+              <span class="material-icons icon-red" >favorite_border</span>
+            </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 pt-3">
+      <div class="card">
+      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSkU4rYQ8TEVOTjfY-eJfQDnDUhrkK9P_nMVT0iglC5Z2OHvruC&usqp=CAU"  height="350" alt="Card image cap">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="card-title">Darbaar</h4>
+                </div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><h4 class="card-title text-right cdn">&#8377;Free</h4></div></div>
+
+
+     <div class="row">
+      <div class="col-6">
+        <a><span class="badge badge-success">Active</span><p class="card-title mb-2">Comedy</p></a></div>
+      
+      
+      <div class="col-1">
+      <h6 class="card-title text-right icon-red"> <span class="material-icons alCenter">play_arrow</span></h6></div>
+      <div class="col-5 mrn"><a href="https://www.youtube.com/watch?v=TIQ5hrfermg"><span class="badge badge-danger blinking">Watch Now</span></a></div></div>
+
+    <div class="row">
+      <div class="col-7">
+        <span class="material-icons">query_builder</span>27th jan 2000 | Hindi</div>
+    <div class="col-5 text-right"><p class="h4 ">
+            <a href="#" class="card-link">
+              <span class="material-icons icon-red" >favorite_border</span>
+            </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 pt-3">
+      <div class="card">
+      <img class="card-img-top" src="https://www.jakpost.travel/wimages/large/32-327526_wallpaper-seram-hd-annabelle-3-2019-poster.jpg" height="350" alt="Card image cap">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="card-title">Annable</h4>
+                </div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><h4 class="card-title text-right cdn">&#8377;199</h4></div></div>
+
+
+     <div class="row">
+      <div class="col-6">
+        <a><span class="badge badge-success">Active</span><p class="card-title mb-2">Horror</p></a></div>
+      
+      
+      <div class="col-1">
+      <h6 class="card-title text-right icon-red"> <span class="material-icons alCenter">double_arrow</span></h6></div>
+      <div class="col-5 mrn"><a href="https://www.youtube.com/watch?v=TIQ5hrfermg"><span class="badge badge-info">Teaser</span></a></div></div>
+
+    <div class="row">
+      <div class="col-7">
+        <span class="material-icons">query_builder</span>27th jan 2018 | English</div>
+    <div class="col-5 text-right"><p class="h4 ">
+            <a href="#" class="card-link">
+              <span class="material-icons icon-red" >favorite_border</span>
+            </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 pt-3">
+      <div class="card">
+      <img class="card-img-top" src="https://www.jakpost.travel/wimages/large/32-327526_wallpaper-seram-hd-annabelle-3-2019-poster.jpg" height="350" alt="Card image cap">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="card-title">Annable</h4>
+                </div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><h4 class="card-title text-right cdn">&#8377;199</h4></div></div>
+
+
+     <div class="row">
+      <div class="col-6">
+        <a><span class="badge badge-success">Active</span><p class="card-title mb-2">Horror</p></a></div>
+      
+      
+      <div class="col-1">
+      <h6 class="card-title text-right icon-red"> <span class="material-icons alCenter">double_arrow</span></h6></div>
+      <div class="col-5 mrn"><a href="https://www.youtube.com/watch?v=TIQ5hrfermg"><span class="badge badge-info">Teaser</span></a></div></div>
+
+    <div class="row">
+      <div class="col-7">
+        <span class="material-icons">query_builder</span>27th jan 2018 | English</div>
+    <div class="col-5 text-right"><p class="h4 ">
+            <a href="#" class="card-link">
+              <span class="material-icons icon-red" >favorite_border</span>
+            </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div class="col-md-3 col-sm-6 col-xs-12 col-lg-3 pt-3">
+      <div class="card">
+      <img class="card-img-top" src="https://www.jakpost.travel/wimages/large/32-327526_wallpaper-seram-hd-annabelle-3-2019-poster.jpg" height="350" alt="Card image cap">
+
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8"><h4 class="card-title">Annable</h4>
+                </div>
+            <div class="col-md-4 col-sm-4 col-xs-4"><h4 class="card-title text-right cdn">&#8377;199</h4></div></div>
+
+
+     <div class="row">
+      <div class="col-6">
+        <a><span class="badge badge-success">Active</span><p class="card-title mb-2">Horror</p></a></div>
+      
+      
+      <div class="col-1">
+      <h6 class="card-title text-right icon-red"> <span class="material-icons alCenter">double_arrow</span></h6></div>
+      <div class="col-5 mrn"><a href="https://www.youtube.com/watch?v=TIQ5hrfermg"><span class="badge badge-info">Teaser</span></a></div></div>
+
+    <div class="row">
+      <div class="col-7">
+        <span class="material-icons">query_builder</span>27th jan 2018 | English</div>
+    <div class="col-5 text-right"><p class="h4 ">
+            <a href="#" class="card-link">
+              <span class="material-icons icon-red" >favorite_border</span>
+            </a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+        
+
+
+        </div>
+      </div>
+    
+
+
+
+<footer>
+<nav class="navbar navbar-expand-sm fixed-bottom bco">
+        <div class="container fomar" ><p class="fco">© Copyright:@Anindita </p>
+          
+        </div>
+    </nav>
+</footer>
+</body>
+</html>
